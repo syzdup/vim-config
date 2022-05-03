@@ -11,7 +11,7 @@ set smartindent
 " Block cursor
 set guicursor
 
-"Other
+" Other
 set nowrap
 set noerrorbells
 set noswapfile
@@ -29,6 +29,13 @@ Plug 'matsuuu/pinkmare'
 "Plug 'ycm-core/YouCompleteMe'
 "Plug 'haystackandroid/strawberry'
 "Plug 'sts10/vim-pink-moon'
+"Plug 'dunstontc/vim-vscode-theme'
+
+" Transparent terminal
+Plug 'tribela/vim-transparent'
+" Omnicomplete for cpp
+Plug 'vim-scripts/OmniCppComplete'
+Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
 call plug#end()
 
 " Colorscheme
@@ -37,4 +44,16 @@ call plug#end()
 "let g:strawberry_light_CursorLineNr = 'off'
 "let g:strawberry_dark_LineNr = 'off'
 "let g:strawberry_light_LineNr = 'off'
-colorscheme pinkmare
+colorscheme pinkmare 
+
+" Background transparency
+" Workaround for creating transparent bg
+"autocmd SourcePost * highlight Normal     ctermbg=NONE guibg=NONE
+"       \ |    highlight LineNr     ctermbg=NONE guibg=NONE
+"       \ |    highlight SignColumn ctermbg=NONE guibg=NONE
+"hi Normal ctermbg=none
+"highlight NonText ctermbg=none
+
+set nocp
+filetype plugin on
+
